@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": -4.76, "attrs": {} },
+    { "type": "wokwi-pir-motion-sensor", "id": "pir", "top": -120, "left": 50, "attrs": {} },
+    { "type": "wokwi-led", "id": "led", "top": 92.4, "left": -101.8, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "res",
+      "top": 187.2,
+      "left": -106.15,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    { "type": "wokwi-buzzer", "id": "buzzer", "top": -55, "left": 222, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn",
+      "top": 92,
+      "left": 326,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr",
+      "top": 22.4,
+      "left": -325.6,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "pir:VCC", "esp:3V3", "red", [ "h-86.18", "v37.6", "h-0.15" ] ],
+    [ "pir:OUT", "esp:13", "green", [ "v8", "h-124", "v182" ] ],
+    [ "pir:GND", "esp:GND.2", "black", [ "v56" ] ],
+    [ "led:A", "res:1", "green", [ "v0" ] ],
+    [ "res:2", "esp:2", "orange", [ "v8.4", "h192", "v-67.2" ] ],
+    [ "led:C", "esp:GND.1", "black", [ "v0" ] ],
+    [ "buzzer:1", "esp:GND.2", "black", [ "v0" ] ],
+    [ "buzzer:2", "esp:15", "purple", [ "v0" ] ],
+    [ "btn:1.l", "esp:GND.2", "black", [ "h-211", "v-76" ] ],
+    [ "btn:2.l", "esp:4", "blue", [ "v0", "h-211", "v19" ] ],
+    [ "ldr:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "ldr:GND", "esp:GND.3", "limegreen", [ "h19.2", "v-58", "h278.4", "v96" ] ],
+    [ "ldr:AO", "esp:34", "cyan", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}

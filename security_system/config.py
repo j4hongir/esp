@@ -1,0 +1,20 @@
+BOT_TOKEN = ""
+CHAT_ID   = ""
+
+WIFI_SSID = "Wokwi-GUEST"
+WIFI_PASS = ""
+
+PIR_PIN    = 13
+LDR_PIN    = 34
+BUZZER_PIN = 15
+LED_PIN    = 2
+BTN_PIN    = 4
+
+LDR_DELTA      = 500
+ALARM_MS       = 10000
+COOLDOWN_MS    = 10000
+DEBOUNCE_MS    = 50
+SENSOR_MS      = 200
+TG_POLL_MS     = 1000
+BEEP_MS        = 300
+UTC_OFFSET     = 18000
