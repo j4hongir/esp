@@ -39,7 +39,7 @@ GPIO 5
 Данные (SDA)
 
 
-📦 Зависимости (Software Dependencies)
+Зависимости (Software Dependencies)
 Для успешной компиляции проекта в Arduino IDE или PlatformIO/VS Code необходимы следующие библиотеки:
 WiFi.h и WiFiClientSecure.h (Встроены в ядро ESP32)
 UniversalTelegramBot (v1.3.0+)
